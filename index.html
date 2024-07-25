@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Oxígeno Disuelto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Oxígeno Disuelto</h1>
+        
+        <label for="temperature">Temperatura (°C):</label>
+        <input type="number" id="temperature" name="temperature" required>
+        
+        <label for="volume">Cantidad de Agua (L):</label>
+        <input type="number" id="volume" name="volume" step="0.01" required>
+        
+        <label for="salinity">Salinidad (g/L):</label>
+        <input type="number" id="salinity" name="salinity" step="0.01" required>
+        
+        <button onclick="calculateDO()">Calcular</button>
+        
+        <div class="button-group">
+            <button onclick="showRanges()">Mostrar Rangos de Niveles</button>
+        </div>
+        <button onclick="resetFields()">Ir hacia atrás</button>
+
+        <div id="results">
+            <p id="doResult">Oxígeno Disuelto: </p>
+            <p id="percentageResult">Porcentaje de Saturación: </p>
+            <p id="rangeResult"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
